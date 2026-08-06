@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Zen Kurenaido', sans-serif;
+  background: #F4ECEA;
+  color: #5A5553;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 140px 20px;
+  background: linear-gradient(135deg, #E8D8D0, #F4ECEA);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 花びらアニメーション */
+.petals span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #E8D8D0;
+  border-radius: 50% 70% 50% 70%;
+  animation: fall 6s linear infinite;
+  opacity: 0.7;
+}
+
+.petals span:nth-child(1) { left: 20%; animation-delay: 0s; }
+.petals span:nth-child(2) { left: 40%; animation-delay: 1s; }
+.petals span:nth-child(3) { left: 60%; animation-delay: 2s; }
+.petals span:nth-child(4) { left: 80%; animation-delay: 3s; }
+.petals span:nth-child(5) { left: 50%; animation-delay: 4s; }
+
+@keyframes fall {
+  0% { top: -20px; transform: rotate(0deg); }
+  100% { top: 200px; transform: rotate(360deg); }
+}
+
+.title {
+  font-size: 2.8rem;
+  margin: 0;
+  color: #A89F9C;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #C9B8B3;
+}
+
+/* Section */
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #A89F9C;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.about-box p {
+  margin: 0px 0;
+}
+
+/* About */
+.about-box {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 10px rgba(169, 159, 156, 0.3);
+}
+
+.hobby-img {
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 10px rgba(169, 159, 156, 0.3);
+  justify-content: center;
+}
+
+.sns-links {
+  margin-top: 10px;
+}
+
+.sns {
+  margin-right: 10px;
+  color: #A89F9C;
+  text-decoration: none;
+}
+
+/* Works */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #E8D8D0;
+  padding: 20px;
+  border-radius: 20px;
+  width: 260px;
+  text-align: left;
+  box-shadow: 0 5px 10px rgba(169, 159, 156, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Hobby */
+.hobby-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hobby {
+  padding: 20px;
+  border-radius: 20px;
+  width: 230px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.hobby:hover {
+  transform: translateY(-5px);
+}
+
+.sight-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sight-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.sight {
+  width: calc(50% - 20px);
+}
+
+
+/* Blog */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-card {
+  background: #E8D8D0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(169, 159, 156, 0.3);
+}
+
+.blog-card .date {
+  font-size: 0.9rem;
+  color: #A89F9C;
+}
+
+/* Contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #C9B8B3;
+  background: #F4ECEA;
+}
+
+textarea {
+  height: 180px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background: #C9B8B3;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #A89F9C;
+}
+
+.contact-success {
+  display: none;              /* 最初は非表示 */
+  background: #F4ECEA;        /* くすみピンク系 */
+  border: 1px solid #C9B8B3;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  color: #8A6E63;
+  font-size: 16px;
+  text-align: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ふわっと出るアニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animation */
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.fadein.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

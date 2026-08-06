@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi-'s Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero fadein">
+    <div class="petals">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <h1 class="title">Me-Mii</h1>
+    <p class="subtitle">Hello. I'm Me.</p>
+  </header>
+
+  <!-- About -->
+  <section class="section fadein" id="about">
+    <h2>About Me</h2>
+    <div class="about-box">
+      <img src="pic\S__27820034.jpg" alt="プロフィール写真" class="profile-img">
+      <div>
+        <p>04line (<span id="age"></span>yers old)
+        <p>From Iwate→Saitama</p>
+        </p>
+        <br>
+        <p>【資格】
+        <p>・日商簿記2級
+        <p>・FP2級
+        <p>・応用情報技術者試験
+        <p>・Python3エンジニア認定基礎試験</p>
+        </p>
+        </p>
+        </p>
+        </p>
+        <div class="sns-links">
+          <a href="https://github.com/me-hr-poq7" class="sns">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section class="section fadein" id="works">
+    <h2>Works</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>GitHub Projects</h3>
+        <p>Coming Soon</p>
+      </div>
+      <div class="card">
+        <h3>Python Scripts</h3>
+        <p>Coming Soon</p>
+      </div>
+      <div class="card">
+        <h3>Excel VBA Tools</h3>
+        <p>Coming Soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobby -->
+  <section class="section fadein" id="hobby">
+    <h2>Hobby</h2>
+    <p class="subtitle">BeatBox</p>
+        <br>
+    <div class="hobby-container">
+      <div class="hobby">
+    <a href="https://youtu.be/pXUlzDAyNsQ?si=8jT0Xvsvn13HH18I">
+      Robin<img src="pic\B39D0E87-E0CC-4C85-881C-24791569C8BC.jpg" alt="Robin" class="hobby-img">
+    </a>
+      </div>
+      <div class="hobby">
+    <a href="https://youtu.be/1vxnMq33gdA?si=ijILZxEPyu3_c6co" class="sns">
+      Martin B<img src="pic\4794C89A-89B9-4A85-8101-5B837BDABF90.jpg" alt="Martin Benati" class="hobby-img">
+    </a>
+      </div>
+      <div class="hobby">
+    <a href="https://youtu.be/VHA31Xnrfqo?si=S9uHzcqkWxwq-chl" class="sns">
+      Wing<img src="pic\S__27828226.jpg" alt="Wing" class="hobby-img">
+    </a>
+      </div>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    <p class="subtitle">Sightseeing</p>
+    <div class="sight-container">
+      <div class="sight">
+      <img src="pic\S__27877382_0.jpg" alt="写真" class="sight-img">
+      </div>
+      <div class="sight">
+      <img src="pic\S__27877383_0.jpg" alt="写真" class="sight-img">
+      </div>
+      <div class="sight">
+      <img src="pic\S__27877384_0.jpg" alt="写真" class="sight-img">
+      </div>
+      <div class="sight">
+      <img src="pic\S__27877385_0.jpg" alt="写真" class="sight-img">
+      </div>
+      <div class="sight">
+      <img src="pic\S__27877386_0.jpg" alt="写真" class="sight-img">
+      </div>
+    </div>
+
+</section>
+
+  <!-- Blog -->
+  <section class="section fadein" id="blog">
+    <h2>Blog</h2>
+    <div class="blog-list">
+      <div class="blog-card">
+        <h3>Webサイト開設</h3>
+        <p class="date">2026.08.06</p>
+        <p>Webサイトを開設しました。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section fadein" id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form" action="https://formspree.io/f/mvkpodgn" method="POST">
+      <label>名前</label>
+      <input type="text" name="name" required>
+
+      <label>メールアドレス</label>
+      <input type="email" name="email" required>
+
+      <label>件名</label>
+      <input type="text" name="_subject" required>
+
+      <label>内容</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">送信する</button>
+
+    </form>
+  <div id="contact-success" class="contact-success">
+    送信しました
+  </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Me._.poq</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
