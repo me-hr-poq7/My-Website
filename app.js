@@ -29,22 +29,38 @@ function calcAge() {
 
 document.getElementById("age").textContent = calcAge();
 
+
 document.querySelector(".contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
   const form = e.target;
 
   fetch(form.action, {
-    method: "POST",
-    headers: { "Accept": "application/json" },
-    body: new FormData(form)
-  }).then(() => {
-    form.reset();
+  method: "POST",
+  headers: { "Accept": "application/json" },
+  body: new FormData(form)
+  })
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("送信失敗");
+    }
 
-    const msg = document.getElementById("contact-success");
-    msg.style.display = "block";
+  form.reset();
 
-    setTimeout(() => {
-      msg.style.display = "none";
+  const successMsg = document.getElementById("contact-success");
+  successMsg.style.display = "block";
+
+  setTimeout(() => {
+    successMsg.style.display = "none";
     }, 8000);
+  })
+  .catch((error) => {
+    console.error(error);
+
+  const errorMsg = document.getElementById("contact-error");
+  errorMsg.style.display = "block";
+
+  setTimeout(() => {
+    errorMsg.style.display = "none";
+  }, 8000);
   });
 });

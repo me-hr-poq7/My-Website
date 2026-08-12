@@ -209,7 +209,8 @@ button:hover {
   background: #A89F9C;
 }
 
-.contact-success {
+.contact-success,
+.contact-error {
   display: none;              /* 最初は非表示 */
   background: #F4ECEA;        /* くすみピンク系 */
   border: 1px solid #C9B8B3;
