@@ -32,35 +32,45 @@ document.getElementById("age").textContent = calcAge();
 
 document.querySelector(".contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
+
   const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // 連打防止
+  submitBtn.disabled = true;
+  submitBtn.textContent = "送信中...";
 
   fetch(form.action, {
-  method: "POST",
-  headers: { "Accept": "application/json" },
-  body: new FormData(form)
+    method: "POST",
+    headers: { "Accept": "application/json" },
+    body: new FormData(form)
   })
   .then((response) => {
     if (!response.ok) {
       throw new Error("送信失敗");
     }
 
-  form.reset();
+    form.reset();
 
-  const successMsg = document.getElementById("contact-success");
-  successMsg.style.display = "block";
+    const successMsg = document.getElementById("contact-success");
+    successMsg.style.display = "block";
 
-  setTimeout(() => {
-    successMsg.style.display = "none";
+    setTimeout(() => {
+      successMsg.style.display = "none";
     }, 8000);
   })
   .catch((error) => {
     console.error(error);
 
-  const errorMsg = document.getElementById("contact-error");
-  errorMsg.style.display = "block";
+    const errorMsg = document.getElementById("contact-error");
+    errorMsg.style.display = "block";
 
-  setTimeout(() => {
-    errorMsg.style.display = "none";
-  }, 8000);
+    setTimeout(() => {
+      errorMsg.style.display = "none";
+    }, 8000);
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = "送信する";
   });
 });
